@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bowen.Tian19-1931014-CPT304-Assignment2</title>
+    <script src="PublicHolidayInfo.js"></script>
+    <script src="accommodationRentalInfo.js"></script>
+    <script src="WeatherInfo.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.staticfile.org/jquery/1.8.3/jquery.min.js"></script>
+
+</head>
+<body>
+
+    <h1>Input the country to get the holiday list</h1>
+    <p>Please click the "Check Holiday" button once you finish your input text to display the output list</p>
+    <label for="country">the country you want to search for public holiday (input format: US, UK, FR, CN...):</label>
+    <input type="text" id="country" >
+    <button type="button" onclick="HolidayCheck()">Check Holiday</button>
+
+    <h1>Click the button can also generate the holiday for a specific country</h1>
+    <p>use Korea as a case</p>
+    <button type="button" onclick="KoreaHoliday()">Korean Holidays</button>
+
+    <h1>Input the city to get the recent weather</h1>
+    <p>Please click the "Check Weather Info" button once you finish your input text to display the output list</p>
+    <label for="cityWeather">the city you want to search for recent weather information (input format: Beijing, Shanghai, Shenzhen...):</label>
+    <input type="text" id="cityWeather" >
+    <br>
+    <label for="provinceWeather">the province or state of the city: (e.g. China province: input "JS" for Jiangsu,
+        USA State: "NY" for New York state, UK: England, Scotland...)</label>
+    <input type="text" id="provinceWeather" >
+    <br>
+    <label for="countryWeather">the country of the city: (e.g. China: CHN, United states of America: USA, United Kingdom: UK)</label>
+    <input type="text" id="countryWeather" >
+    <br>
+    <label for="dateWeather">the date you want to check weather: (e.g. 2020-01-01, YYYY-MM-DD)</label>
+    <input type="text" id="dateWeather" >
+    <br>
+    <button type="button" onclick="weatherCheck()">Check Weather Info</button>
+
+
+    <h1>Click the button can also generate the weather information for a city</h1>
+    <p>use Suzhou in 2023-01-01 as a case</p>
+    <button type="button" onclick="SuzhouWeather()">Suzhou Weather</button>
+    
+    <h1>Input the city to get the rental (hotel) list</h1>
+    <p>Please click the check "Check Rental Info" once you finish your input text to display the output list</p>
+    <label for="city">the city you want to search for rental or hotel information (input format: Beijing, Shanghai, Shenzhen...):</label>
+    <input type="text" id="city" >
+    <button type="button" onclick="rentalCheck()">Check Rental Info</button>
+
+    <h1>Click the button can also generate the rental information for a city</h1>
+    <p>use Suzhou as a case</p>
+    <button type="button" onclick="SuzhouHotel()">Suzhou Hotels</button>
+
+
+
+<pre id="holidayResult"></pre>
+<pre id="weatherResult"></pre>
+<pre id="rentalResult"></pre>
+
+
+</body>
+</html>
